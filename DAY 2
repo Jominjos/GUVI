@@ -1,0 +1,9 @@
+In JavaScript, the document and window objects are two of the most important objects in the browser environment.
+
+The document object represents the web page that is currently being displayed in the browser. It provides access to the various elements of the page, such as HTML elements, and allows you to manipulate their properties, content, and appearance. Some of the commonly used properties and methods of the document object include getElementById(), createElement(), innerHTML, write(), and addEventListener().
+
+The window object represents the browser window that contains the web page. It provides access to the browser's properties and methods, such as the URL of the current page, the size and position of the window, and the ability to open and close windows. Some of the commonly used properties and methods of the window object include location, open(), close(), setTimeout(), and setInterval().
+
+Both document and window objects are part of the browser's DOM (Document Object Model) API. They provide a way for JavaScript code to interact with the browser and modify the web page. The document object is a property of the window object, which means that you can access the document object using window.document.
+
+In summary, the document and window objects in JavaScript are two of the most important objects in the browser environment. They provide access to the web page and the browser window, respectively, and allow you to manipulate their properties and behavior using JavaScript code.
