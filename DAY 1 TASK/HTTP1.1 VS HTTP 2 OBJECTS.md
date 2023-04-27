@@ -21,3 +21,17 @@ Finally, HTTP2 requires the use of TLS encryption, which provides an additional 
 Conclusion
 
 In summary, HTTP2 is designed to be faster, more efficient, and more secure than HTTP1.1. It supports multiplexing, header compression, server push, and requires the use of TLS encryption. These features help to overcome the limitations of HTTP1.1 and provide a better user experience for web users. As more websites transition to HTTP2, we can expect to see faster load times, improved security, and a more efficient web.
+
+OBJECTS AND ITS REPRESENTATION IN JS?
+
+In JavaScript, objects are a fundamental data type that represent a collection of related data and functionality. Objects are made up of key-value pairs, where the key is a string that serves as a unique identifier for the associated value.
+
+Internally, objects in JavaScript are represented as a collection of properties. Properties can be data properties or accessor properties. Data properties contain a value that can be read or written to, while accessor properties define functions that can be used to get or set a value.
+
+Objects in JavaScript can be created using object literals, constructor functions, or using the Object.create() method. Object literals allow you to create an object with a set of properties and values, while constructor functions are used to create new instances of an object with shared properties and functionality. The Object.create() method allows you to create a new object with a specified prototype.
+
+When an object is created in JavaScript, it is allocated memory in the heap, and a reference to that object is stored in a variable. This reference can be used to access the object's properties and methods.
+
+In addition to their own properties, objects in JavaScript also inherit properties and methods from their prototype object. This allows for object-oriented programming patterns and inheritance.
+
+Overall, objects in JavaScript are a powerful tool for organizing and manipulating data in a flexible and dynamic way
