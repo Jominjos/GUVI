@@ -21,7 +21,8 @@ for (var prop in obj1) {
     
     const result = await response.json();
     for(let i=0;i<result.length;i++){
-    console.log((result[i].name).common,((result[i]).flags).png);
+    console.log(`Country Name:`,(result[i].name).common, `,flag:`,((result[i]).flags).png ,`,Region:`,(result[i]).region,`,Subregion:`,(result[i]).subregion,`,Population:`,(result[i]).population);
+    
     }
     }
     resp ();
