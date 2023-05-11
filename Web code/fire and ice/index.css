@@ -1,0 +1,26 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    
+  }
+.icee{
+    text-align: center;
+    justify-content: center;
+}
+#myInput{
+    padding-left: 10px;
+    margin-left: 80vw;
+    align-items: center;
+    justify-content: center;
+}
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
