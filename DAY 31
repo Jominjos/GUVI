@@ -1,0 +1,84 @@
+IMDB DATABASE DESIGN SQL
+
+
+Table: Movie
+
+movie_id (Primary Key)
+title
+release_year
+duration
+rating
+description
+
+
+
+Table: Media
+
+media_id (Primary Key)
+movie_id (Foreign Key referencing Movie.movie_id)
+type (Video or Image)
+url
+
+
+
+Table: Genre
+
+genre_id (Primary Key)
+name
+
+
+
+Table: Movie_Genre
+
+movie_id (Foreign Key referencing Movie.movie_id)
+genre_id (Foreign Key referencing Genre.genre_id)
+
+
+
+Table: User
+
+user_id (Primary Key)
+name
+email
+password
+
+
+
+Table: Review
+
+review_id (Primary Key)
+movie_id (Foreign Key referencing Movie.movie_id)
+user_id (Foreign Key referencing User.user_id)
+rating
+comment
+date
+
+
+
+Table: Artist
+
+artist_id (Primary Key)
+name
+
+
+
+Table: Skill
+
+skill_id (Primary Key)
+name
+
+
+
+Table: Artist_Skill
+
+artist_id (Foreign Key referencing Artist.artist_id)
+skill_id (Foreign Key referencing Skill.skill_id)
+
+
+
+Table: Film_Credit
+
+film_credit_id (Primary Key)
+movie_id (Foreign Key referencing Movie.movie_id)
+artist_id (Foreign Key referencing Artist.artist_id)
+role
