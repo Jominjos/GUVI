@@ -1,0 +1,109 @@
+ Design database for Zen class programme
+
+users
+codekata
+attendance
+topics
+tasks
+company_drives
+mentors
+
+ Requirements:
+1.Find all the topics and tasks which are thought in the month of October
+2.Find all the company drives which appeared between 15 oct-2020 and 31-oct-2020
+3.Find all the company drives and students who are appeared for the placement.
+4.find the number of problems solved by the user in codekata
+5.Find all the mentors with who has the mentee's count more than 15
+6.Find the number of users who are absent and task is not submitted  between 15 oct-2020 and 31-oct-2020
+
+
+
+students(collection):
+
+_id,
+name,
+email,
+mentors: mongoose.Schema.Types.ObjectId, ref: "mentor",
+codekata: mongoose.Schema.Types.ObjectId, ref:"codeKata",
+completedTasks: [mongoose.Schema.Types.ObjectId] , ref:"tasks",
+Companydrives_attended:[ mongoose.Schema.Types.ObjectId] ,  ref:"companydrives"
+
+
+
+mentor(collection):
+
+_id,
+name,
+email,
+students:[ mongoose.Schema.Types.ObjectId ,ref:"students"],
+
+
+
+
+
+codeKata_problems(Collection):
+
+_id,
+question,
+options,
+answer
+
+
+codeKata(Collection):
+
+_id,
+attempted_by: mongoose.Schema.Types.ObjectId, ref:"student",
+problem_id: mongoose.Schema.Types.ObjectId , ref:"codeKata_problems",
+solved:boolean,
+attempted_on:Date,
+
+
+
+
+attendance(collection):
+
+_id,
+session_date:Date,
+Topic : [mongoose.Schema.Types.ObjectId, ref="topics" ],
+Mentor: mongoose.Schema.Types.ObjectId , ref:"mentors",
+Present_list:[{  mongoose.Schema.Types.ObjectId , ref:'students' }],
+Absent_list:[{ mongoose.Schema.Types.ObjectId , ref:"students"}]
+
+
+
+topics(collection):
+
+_id
+topic_name
+description
+materials (e.g., links to reading materials)
+
+
+
+tasks(collection):
+
+_id,
+task_name,
+description,
+due_date,
+completedBy:[{type:mongoose.Schema.Types.ObjectId , ref:students  }],
+IncompleBy:[{type:mongoose.Schema.Types.ObjectId , ref:students  }],
+
+
+
+
+company_drives(collection):
+
+_id
+drive_name
+company_name
+drive_date
+description,
+students_attended:[{mongoose.Schema.Types.ObjectId , ref:"students"}]
+
+
+
+
+
+
+
